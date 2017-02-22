@@ -1,0 +1,22 @@
+DEPENDENCIES:
+
+  libg15
+  libg15render
+  libappindicator3
+  pthread
+  gtk3
+
+
+BUILD:
+
+  make
+
+
+INSTALL:
+
+  sudo make install
+
+
+UNINSTALL:
+
+  sudo make uninstall

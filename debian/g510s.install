@@ -1,0 +1,7 @@
+g510s usr/bin
+g510s.svg usr/share/g510s
+g510s-alert.svg usr/share/g510s
+g510s.glade usr/share/g510s
+g510s.desktop etc/xdg/autostart
+g510s.desktop usr/share/applications
+99-g510s.rules lib/udev/rules.d

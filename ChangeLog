@@ -1,0 +1,5 @@
+0.0.2:
+  - hardcode images and ui files to final installation paths
+
+0.0.1:
+  - initial primary feature implementation and release

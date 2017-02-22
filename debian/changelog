@@ -1,0 +1,24 @@
+g510s (0.0.2-3) xenial; urgency=low
+
+  * debian/control: add Provides, Conflicts, Replaces g15daemon
+
+ -- John Augustine <vivnet@comcast.net>  Fri, 15 Jul 2016 11:54:00 -0700
+
+g510s (0.0.2-2) xenial; urgency=low
+
+  * Rebuild to fix LP#1556666
+
+ -- John Augustine <vivnet@comcast.net>  Tue, 29 Mar 2016 11:51:50 -0700
+
+g510s (0.0.2-1) wily; urgency=low
+
+  * Update paths relative to install destination
+  * Add g510s.desktop to /usr/share/applications
+
+ -- John Augustine <vivnet@comcast.net>  Sun, 15 Nov 2015 14:11:00 -0800
+
+g510s (0.0.1-1) wily; urgency=low
+
+  * Initial release
+
+ -- John Augustine <vivnet@comcast.net>  Sat, 14 Nov 2015 15:14:44 -0800

@@ -1,0 +1,76 @@
+ABOUT:
+
+G510s is a simple utility designed to enable the full
+features of the Logitech G510 and G510s keyboards
+under Linux.  It is written entirely in C.
+
+It is based on g15tools, g15daemon, and gnome15.
+
+g15tools: http://sourceforge.net/projects/g15tools/
+g15daemon: http://sourceforge.net/projects/g15daemon/
+
+Note that there is no official source for gnome15 as 
+of mid-2015.
+
+Additionally, libg15 within the official g15tools repository
+is insufficient for the operation of these keyboards and 
+needs additional, yet minor, changes.  I will include
+a patched, unofficial version of libg15 in the G510s source
+repository.  The upstream repository appears unmaintained
+but I will attempt to get these changes merged in the future.
+
+
+WHY:
+
+Existing implementations for this keyboard on Linux have a 
+number of show stopping bugs.  Because g15daemon appears 
+unmaintained and gnome15 has practically vanished overnight,
+I have decided to write a new implementation based on the
+existing g15daemon.  G510s solves the following problems
+associated with g15daemon and gnome15:
+
+  - The keyboard stops responding
+  - Sometimes pressing an extra key twice is required
+  - The LCD display requires a button press to update
+
+
+FEATURES:
+
+  - Libg15 and Libusb debugging via cli switch
+  - Four profiles, selectable with M1, M2, M3 and MR keys
+  - Custom LED backlight colors per profile
+  - Custom G-Key script/command execution per profile
+  - Persistent sessions
+  - Executable as user (instead of root)
+  - GUI and AppIndicator for desktop integration
+  - Handles device hotplug events (on-device audio)
+  - LCD display server
+  - libg15daemon-client compatibility
+
+USAGE:
+
+  DO NOT RUN AS ROOT
+
+  After install you will need to reboot or reload udev
+    sudo /etc/init.d/udev restart
+
+  G510s should start automatically when you log in.
+  You can manually start it with
+
+  ./g510s or /usr/local/bin/g510s
+
+  Additional runtime options are available, see
+
+  g510s --help
+
+  G510s relies on the HOME environment variable for session
+  saves.  If is not set the program should work, but you
+  won't have session persistent colors or G-Key commands.
+
+  To check if it is set, run:
+
+  echo $HOME
+
+  You can set it in a number of ways, including:
+
+  HOME=<path> ./g510s

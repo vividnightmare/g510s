@@ -1,0 +1,9 @@
+# Make uinput load
+SUBSYSTEM=="input", RUN+="/sbin/modprobe uinput"
+
+# Set permissions for uinput devices
+KERNEL=="event*|uinput", GROUP="plugdev", MODE="0660"
+
+# Logitech G510 and G510s
+SUBSYSTEM=="usb", ACTION=="add", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c22d", MODE="0660", GROUP="plugdev"
+SUBSYSTEM=="usb", ACTION=="add", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c22e", MODE="0660", GROUP="plugdev"
