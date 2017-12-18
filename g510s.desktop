@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=G510s
 Comment=Utility for Logitech G510 and G510s Keyboards
-Exec=/usr/bin/g510s
-Icon=/usr/share/g510s/g510s.svg
+Exec=/usr/local/bin/g510s
+Icon=/usr/local/share/g510s/g510s.svg
 Terminal=false
 Type=Application
 
