@@ -236,7 +236,7 @@ int main(int argc, char *argv[]) {
   
   builder = gtk_builder_new();
   // FIXME: hardcode to installed path
-  gtk_builder_add_from_file(builder, "/usr/share/g510s/g510s.glade", NULL);
+  gtk_builder_add_from_file(builder, "/usr/local/share/g510s/g510s.glade", NULL);
   
   window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
   aboutdialog = GTK_ABOUT_DIALOG(gtk_builder_get_object(builder, "aboutdialog"));
@@ -340,9 +340,9 @@ int main(int argc, char *argv[]) {
   // indicator
   indicator_menu = GTK_WIDGET(gtk_builder_get_object(builder, "indicator_menu"));
   // FIXME: hardcode to installed path
-  indicator = app_indicator_new("G510s", "/usr/share/g510s/g510s.svg", APP_INDICATOR_CATEGORY_HARDWARE);
+  indicator = app_indicator_new("G510s", "/usr/local/share/g510s/g510s.svg", APP_INDICATOR_CATEGORY_HARDWARE);
   // FIXME: hardcode to installed path
-  app_indicator_set_attention_icon(indicator, "/usr/share/g510s/g510s-alert.svg");
+  app_indicator_set_attention_icon(indicator, "/usr/local/share/g510s/g510s-alert.svg");
   app_indicator_set_menu(indicator, GTK_MENU(indicator_menu));
   
   gtk_builder_connect_signals(builder, NULL);
